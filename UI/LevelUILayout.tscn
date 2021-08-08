@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://UI/BarUnit.tscn" type="PackedScene" id=3]
+[ext_resource path="res://UI/RingCounter.tscn" type="PackedScene" id=4]
+[ext_resource path="res://UI/boostBar.tscn" type="PackedScene" id=5]
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = 73.0
+margin_top = 31.0181
+margin_right = 149.0
+margin_bottom = 53.0181
+text = "000"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RingCounter" parent="." instance=ExtResource( 4 )]
+
+[node name="boostBar" parent="." instance=ExtResource( 5 )]
+
+[node name="Unit" parent="boostBar" instance=ExtResource( 3 )]
+visible = false

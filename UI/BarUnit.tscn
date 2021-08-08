@@ -1,0 +1,24 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://sprites/UI/boostbar.png" type="Texture" id=1]
+
+[node name="Unit" type="Control"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -56.0
+margin_right = 22.0
+margin_bottom = -48.0
+rect_scale = Vector2( 2, 2 )
+rect_clip_content = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = -24.0
+margin_right = 40.0
+margin_bottom = 16.0
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

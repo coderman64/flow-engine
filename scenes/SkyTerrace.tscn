@@ -1,0 +1,243 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://LevelItems/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://tiles/SkyTerrace/SkyTiles.tres" type="TileSet" id=2]
+[ext_resource path="res://audio/GardianPalace3.ogg" type="AudioStream" id=3]
+[ext_resource path="res://sprites/Backgrounds/Festival/Castle.png" type="Texture" id=4]
+[ext_resource path="res://sprites/Backgrounds/Festival/Villa.png" type="Texture" id=5]
+[ext_resource path="res://LevelItems/FallingParticles.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scripts/AudioPlayer.gd" type="Script" id=9]
+[ext_resource path="res://UI/LevelUILayout.tscn" type="PackedScene" id=15]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.0790698, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=3]
+emission_shape = 2
+emission_box_extents = Vector3( 300, 300, 0 )
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel_random = 1.0
+angle = 720.0
+angle_random = 1.0
+scale = 10.0
+scale_random = 1.0
+scale_curve = SubResource( 2 )
+color = Color( 0.396078, 0, 0.878431, 1 )
+
+[sub_resource type="ParticlesMaterial" id=4]
+emission_shape = 2
+emission_box_extents = Vector3( 300, 300, 0 )
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel_random = 1.0
+angle = 720.0
+angle_random = 1.0
+scale = 10.0
+scale_random = 1.0
+scale_curve = SubResource( 2 )
+color = Color( 0.0470588, 0.929412, 0.247059, 1 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 2
+emission_box_extents = Vector3( 300, 300, 0 )
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel_random = 1.0
+angle = 720.0
+angle_random = 1.0
+scale = 10.0
+scale_random = 1.0
+scale_curve = SubResource( 2 )
+color = Color( 0.941176, 0.560784, 0, 1 )
+
+[sub_resource type="ParticlesMaterial" id=6]
+emission_shape = 2
+emission_box_extents = Vector3( 300, 300, 0 )
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel_random = 1.0
+angle = 720.0
+angle_random = 1.0
+scale = 10.0
+scale_random = 1.0
+scale_curve = SubResource( 2 )
+color = Color( 0.968627, 0.0588235, 0.0470588, 1 )
+
+[sub_resource type="ParticlesMaterial" id=7]
+emission_shape = 2
+emission_box_extents = Vector3( 300, 300, 0 )
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 98, 0 )
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel_random = 1.0
+angle = 720.0
+angle_random = 1.0
+scale = 10.0
+scale_random = 1.0
+scale_curve = SubResource( 2 )
+color = Color( 0.0470588, 0.639216, 0.968627, 1 )
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0, 0.768868, 1 )
+colors = PoolColorArray( 0.00784314, 0.121569, 0.180392, 1, 0.207, 0, 0.46, 1, 0.921569, 0.556863, 0, 1 )
+
+[sub_resource type="GradientTexture" id=9]
+gradient = SubResource( 8 )
+width = 128
+
+[sub_resource type="Gradient" id=10]
+offsets = PoolRealArray( 0, 0.768868, 1 )
+colors = PoolColorArray( 0.00784314, 0.121569, 0.180392, 1, 0.207, 0, 0.46, 1, 0.03125, 0, 1, 1 )
+
+[sub_resource type="GradientTexture" id=11]
+gradient = SubResource( 10 )
+width = 128
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 9000, 100 )
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( -2289.76, -76.452 )
+
+[node name="Particles2D" parent="Player" instance=ExtResource( 6 )]
+visible = false
+amount = 25
+process_material = SubResource( 3 )
+
+[node name="Particles2D2" parent="Player" instance=ExtResource( 6 )]
+visible = false
+amount = 25
+process_material = SubResource( 4 )
+
+[node name="Particles2D3" parent="Player" instance=ExtResource( 6 )]
+visible = false
+amount = 25
+process_material = SubResource( 5 )
+
+[node name="Particles2D4" parent="Player" instance=ExtResource( 6 )]
+visible = false
+amount = 25
+process_material = SubResource( 6 )
+
+[node name="Particles2D5" parent="Player" instance=ExtResource( 6 )]
+visible = false
+amount = 25
+process_material = SubResource( 7 )
+
+[node name="TileMap2" type="TileMap" parent="."]
+z_index = -5
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+collision_layer = 2
+collision_mask = 2
+format = 1
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+format = 1
+tile_data = PoolIntArray( 65489, 0, 0, 65490, 0, 0, 65491, 0, 0, 65492, 0, 0, 65493, 0, 0, 65494, 0, 0, 65495, 0, 0, 65496, 0, 0, 65497, 0, 0, 65498, 0, 0, 65499, 0, 0, 65500, 0, 0, 65501, 0, 0, 65502, 0, 0, 65503, 0, 0, 65504, 0, 0, 65505, 0, 0, 65506, 0, 0, 65507, 0, 0, 65508, 0, 0, 65509, 0, 0, 65510, 0, 0, 65511, 0, 0, 65512, 0, 0, 65513, 0, 0, 65514, 0, 0, 65515, 0, 0, 65516, 0, 0, 65517, 0, 0, 65518, 0, 0, 65519, 0, 0, 131025, 1, 0, 131026, 1, 0, 131027, 1, 0, 131028, 1, 0, 131029, 1, 0, 131030, 1, 0, 131031, 1, 0, 131032, 1, 0, 131033, 1, 0, 131034, 1, 0, 131035, 1, 0, 131036, 1, 0, 131037, 1, 0, 131038, 1, 0, 131039, 1, 0, 131040, 1, 0, 131041, 1, 0, 131042, 1, 0, 131043, 1, 0, 131044, 1, 0, 131045, 1, 0, 131046, 1, 0, 131047, 1, 0, 131048, 1, 0, 131049, 1, 0, 131050, 1, 0, 131051, 1, 0, 131052, 1, 0, 131053, 1, 0, 131054, 1, 0, 131055, 1, 0, 196561, 1, 0, 196562, 1, 0, 196563, 1, 0, 196564, 1, 0, 196565, 1, 0, 196566, 1, 0, 196567, 1, 0, 196568, 1, 0, 196569, 1, 0, 196570, 1, 0, 196571, 1, 0, 196572, 1, 0, 196573, 1, 0, 196574, 1, 0, 196575, 1, 0, 196576, 1, 0, 196577, 1, 0, 196578, 1, 0, 196579, 1, 0, 196580, 1, 0, 196581, 1, 0, 196582, 1, 0, 196583, 1, 0, 196584, 1, 0, 196585, 1, 0, 196586, 1, 0, 196587, 1, 0, 196588, 1, 0, 196589, 1, 0, 196590, 1, 0, 196591, 1, 0, 262097, 1, 0, 262098, 1, 0, 262099, 1, 0, 262100, 1, 0, 262101, 1, 0, 262102, 1, 0, 262103, 1, 0, 262104, 1, 0, 262105, 1, 0, 262106, 1, 0, 262107, 1, 0, 262108, 1, 0, 262109, 1, 0, 262110, 1, 0, 262111, 1, 0, 262112, 1, 0, 262113, 1, 0, 262114, 1, 0, 262115, 1, 0, 262116, 1, 0, 262117, 1, 0, 262118, 1, 0, 262119, 1, 0, 262120, 1, 0, 262121, 1, 0, 262122, 1, 0, 262123, 1, 0, 262124, 1, 0, 262125, 1, 0, 262126, 1, 0, 262127, 1, 0, 327633, 1, 0, 327634, 1, 0, 327635, 1, 0, 327636, 1, 0, 327637, 1, 0, 327638, 1, 0, 327639, 1, 0, 327640, 1, 0, 327641, 1, 0, 327642, 1, 0, 327643, 1, 0, 327644, 1, 0, 327645, 1, 0, 327646, 1, 0, 327647, 1, 0, 327648, 1, 0, 327649, 1, 0, 327650, 1, 0, 327651, 1, 0, 327652, 1, 0, 327653, 1, 0, 327654, 1, 0, 327655, 1, 0, 327656, 1, 0, 327657, 1, 0, 327658, 1, 0, 327659, 1, 0, 327660, 1, 0, 327661, 1, 0, 327662, 1, 0, 327663, 1, 0 )
+
+[node name="BackgroundMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+script = ExtResource( 9 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_scale = Vector2( 0, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer4"]
+position = Vector2( -15.4216, -149.34 )
+rotation = 1.5708
+scale = Vector2( 2.5, 1000 )
+texture = SubResource( 9 )
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_scale = Vector2( 0.1, 0 )
+
+[node name="Villa" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 138.109, -32.3916 )
+texture = ExtResource( 5 )
+
+[node name="Villa3" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 59.0268, -35.3646 )
+texture = ExtResource( 5 )
+
+[node name="Villa5" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( -81.2996, -32.9862 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_scale = Vector2( 0.105, 0.005 )
+
+[node name="Castle" type="Sprite" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2( 4.88063, -64.7696 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 4 )
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_scale = Vector2( 0.11, 0.01 )
+
+[node name="Villa4" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( -40.272, -26.4455 )
+texture = ExtResource( 5 )
+
+[node name="Villa2" type="Sprite" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2( 91.1354, -27.6348 )
+texture = ExtResource( 5 )
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground"]
+visible = false
+motion_scale = Vector2( 0, 0.015 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer5"]
+position = Vector2( -4.10785, 155.732 )
+rotation = -1.5708
+scale = Vector2( 2.5, 1000 )
+texture = SubResource( 11 )
+
+[node name="DeathPlane" type="Area2D" parent="."]
+position = Vector2( 4321.7, 489.486 )
+collision_layer = 1048575
+collision_mask = 1048575
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DeathPlane"]
+shape = SubResource( 12 )
+
+[node name="CanvasLayer" parent="." instance=ExtResource( 15 )]
+
+[connection signal="area_entered" from="DeathPlane" to="Player" method="_on_DeathPlane_area_entered"]

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/airBoostRing.wav-f0bd38d6f1f097e870febd5f714ade32.sample"
+
+[deps]
+
+source_file="res://audio/SFX/airBoostRing.wav"
+dest_files=[ "res://.import/airBoostRing.wav-f0bd38d6f1f097e870febd5f714ade32.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

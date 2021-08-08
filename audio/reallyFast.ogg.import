@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/reallyFast.ogg-221f2105f4eaab9ac6c97ada64c1ef42.oggstr"
+
+[deps]
+
+source_file="res://audio/reallyFast.ogg"
+dest_files=[ "res://.import/reallyFast.ogg-221f2105f4eaab9ac6c97ada64c1ef42.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
