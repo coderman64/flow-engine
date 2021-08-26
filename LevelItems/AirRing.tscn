@@ -4,9 +4,7 @@
 [ext_resource path="res://audio/SFX/airBoostRing.wav" type="AudioStream" id=2]
 [ext_resource path="res://scripts/Spring.gd" type="Script" id=3]
 
-
-
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 1 ) ],
 "loop": true,
@@ -14,10 +12,11 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=8]
+[sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 26.2442, 6.21687 )
 
 [node name="AirRing" type="Area2D"]
+light_mask = 0
 monitorable = false
 collision_layer = 7
 collision_mask = 7
@@ -26,14 +25,16 @@ DIRECTED = true
 ringScale = true
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-frames = SubResource( 7 )
+light_mask = 0
+frames = SubResource( 1 )
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -7.62939e-06, 6.32981 )
-shape = SubResource( 8 )
+shape = SubResource( 2 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 2 )
 volume_db = -3.176
+
 [connection signal="area_entered" from="." to="." method="_on_Area2D_area_entered"]

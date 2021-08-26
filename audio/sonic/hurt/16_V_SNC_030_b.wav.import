@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/16_V_SNC_030_b.wav-b0388efd45841b1ecf0bf122f71366fc.sample"
+
+[deps]
+
+source_file="res://audio/sonic/hurt/16_V_SNC_030_b.wav"
+dest_files=[ "res://.import/16_V_SNC_030_b.wav-b0388efd45841b1ecf0bf122f71366fc.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

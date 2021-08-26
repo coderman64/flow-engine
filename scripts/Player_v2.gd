@@ -18,6 +18,7 @@ export(AudioStream) var stomp_land_sfx
 # a reference to a bouncing ring prefab, so we can spawn a bunch of them when
 # sonic is hurt 
 export(PackedScene) var bounceRing
+export(PackedScene) var boostParticle
 
 # a list of particle systems for Sonic to control with his speed 
 # used for the confetti in the carnival level, or the falling leaves in leaf storm
@@ -80,6 +81,9 @@ var rolling = false
 var grinding = false
 var stomping = false
 var boosting = false
+var tricking = false
+
+var trickingCanStop = false
 
 # flags and values for getting hurt
 var hurt = false
@@ -90,6 +94,7 @@ var grindPos = Vector2(0,0)	# the origin position of the currently grinded rail
 var grindOffset = 0.0		# how far along the rail (in pixels) is sonic?
 var grindCurve = null		# the curve that sonic is currently grinding on
 var grindVel = 0.0			# the velocity along the grind rail at which sonic is currently moving
+var grindHeight = 16		# how high above the rail is the center of Sonic's sprite?
 
 # references to all the various raycasting nodes used for Sonic's collision with
 # the map
@@ -113,6 +118,11 @@ var ringCounter	# holds a reference to the ring counter UI item
 
 var boostSound	# the audio stream player with the boost sound
 var RailSound	# the audio stream player with the rail grinding sound
+var voiceSound 	# the audio stream player with the character's voices
+
+# the minimum and maximum speed/pitch changes on the grinding sound
+var RAILSOUND_MINPITCH = 0.5
+var RAILSOUND_MAXPITCH = 2.0
 
 var cam			# a reference to the scene's camera
 var grindParticles	# a reference to the particle node for griding
@@ -164,6 +174,7 @@ func _ready():
 	# get the audio stream player nodes
 	boostSound = find_node("BoostSound")
 	RailSound = find_node("RailSound")
+	voiceSound = find_node("Voice")
 	
 	# put all child particle systems in parts except for the grind particles
 	for i in get_children():
@@ -238,6 +249,8 @@ func boostControl():
 		if state == -1 and velocity1.x < ACCELERATION:
 			velocity1.x = BOOST_SPEED*(1 if sprite1.flip_h else -1)
 			velocity1.y = 0
+		
+		voiceSound.play_effort()
 			
 	if Input.is_action_pressed("boost") and boosting and boostBar.boostAmount > 0:
 #		if boostSound.stream != boost_sfx:
@@ -248,7 +261,7 @@ func boostControl():
 		cam.set_follow_smoothing(lerp(cam.get_follow_smoothing(),DEFAULT_CAM_LAG,CAM_LAG_SLIDE))
 		
 		if grinding:
-			# apply boos to a grind
+			# apply boost to a grind
 			grindVel = BOOST_SPEED*(1 if sprite1.flip_h else -1)
 		elif state == 0:
 			# apply boost if you are on the ground
@@ -603,19 +616,39 @@ func _physics_process(delta):
 	
 	# run the correct function based on the current air/ground state
 	if grinding:
-		# run boost controls
-		sprite1.animation = "Grind"
 		
+		
+		if tricking:
+			sprite1.animation = "railTrick"
+			sprite1.speed_scale = 1
+			if sprite1.frame > 0:
+				trickingCanStop = true
+			if sprite1.frame <= 0 and trickingCanStop:
+				tricking = false
+				var part = boostParticle.instance()
+				part.position = position 
+				part.boostValue = 2
+				get_node("/root/Node2D").add_child(part)
+		else:
+			sprite1.animation = "Grind"
+			
+		if Input.is_action_just_pressed("stomp") and not tricking:
+			tricking = true
+			trickingCanStop = false
+			voiceSound.play_effort()
+		
+		grindHeight = sprite1.frames.get_frame(sprite1.animation,sprite1.frame).get_height()/2
 		
 		grindOffset += grindVel
 		var dirVec = grindCurve.interpolate_baked(grindOffset+1)-grindCurve.interpolate_baked(grindOffset)
 #		grindVel = velocity1.dot(dirVec)
 		rotation = dirVec.angle()
 		position = grindCurve.interpolate_baked(grindOffset)\
-			+Vector2.UP*16*cos(rotation)+Vector2.RIGHT*16*sin(rotation)\
+			+Vector2.UP*grindHeight*cos(rotation)+Vector2.RIGHT*grindHeight*sin(rotation)\
 			+grindPos
 		
-		RailSound.pitch_scale = lerp(0.5,2,abs(grindVel)/BOOST_SPEED)
+		RailSound.pitch_scale = lerp(RAILSOUND_MINPITCH,RAILSOUND_MAXPITCH,\
+			abs(grindVel)/BOOST_SPEED)
 		grindVel += sin(rotation)*GRAVITY
 		
 		if dirVec.length() < 0.5 or \
@@ -623,6 +656,8 @@ func _physics_process(delta):
 			grindCurve.interpolate_baked(grindOffset):
 			state = -1
 			grinding = false
+			tricking = false
+			trickingCanStop = false
 			RailSound.stop()
 		else:
 			velocity1 = dirVec*grindVel
@@ -637,6 +672,8 @@ func _physics_process(delta):
 				canShort = true
 				rolling = false
 				grinding = false
+				tricking = false
+				trickingCanStop = false
 				RailSound.stop()
 		else:
 			canShort = false
@@ -716,8 +753,16 @@ func _setVelocity(vel):
 
 
 func _on_Railgrind(area,curve,origin):
+	"""
+	this function is run whenever sonic hits a rail.
+	"""
+	
+	# stick to the current rail if you're already grindin
+	if grinding:
+		return
+	
+	# activate grind, if you are going downward
 	if self == area and velocity1.y > 0:
-		print("RAIL")
 		grinding = true
 		grindCurve = curve
 		grindPos = origin
@@ -746,6 +791,8 @@ func hurt_player():
 		rotation = 0
 		position += velocity1*2
 		sprite1.animation = "hurt"
+		
+		voiceSound.play_hurt()
 		
 		var t = 0
 		var angle = 101.25

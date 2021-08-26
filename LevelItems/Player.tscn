@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://sprites/sonic/sonic_run4_7.png" type="Texture" id=1]
 [ext_resource path="res://sprites/effects/sonic_boost_2.png" type="Texture" id=2]
@@ -55,6 +55,18 @@
 [ext_resource path="res://audio/SFX/rail.wav" type="AudioStream" id=53]
 [ext_resource path="res://sprites/sonic/hurt.png" type="Texture" id=54]
 [ext_resource path="res://LevelItems/BounceRing.tscn" type="PackedScene" id=55]
+[ext_resource path="res://sprites/sonic/railFlip.png" type="Texture" id=56]
+[ext_resource path="res://BoostParticle.tscn" type="PackedScene" id=57]
+[ext_resource path="res://LevelItems/voices.gd" type="Script" id=58]
+[ext_resource path="res://audio/sonic/hurt/08_V_SNC_007_b.wav" type="AudioStream" id=59]
+[ext_resource path="res://audio/sonic/effort/14_V_SNC_013_a.wav" type="AudioStream" id=60]
+[ext_resource path="res://audio/sonic/hurt/07_V_SNC_006_a.wav" type="AudioStream" id=61]
+[ext_resource path="res://audio/sonic/effort/18_V_SNC_033_c.wav" type="AudioStream" id=62]
+[ext_resource path="res://audio/sonic/hurt/21_V_SNC_035_c.wav" type="AudioStream" id=63]
+[ext_resource path="res://audio/sonic/effort/01_V_SNC_002_a.wav" type="AudioStream" id=64]
+[ext_resource path="res://audio/sonic/effort/01_V_SNC_000_b.wav" type="AudioStream" id=65]
+[ext_resource path="res://audio/sonic/hurt/16_V_SNC_030_b.wav" type="AudioStream" id=66]
+[ext_resource path="res://audio/sonic/hurt/08_V_SNC_008_c.wav" type="AudioStream" id=67]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -79,58 +91,86 @@ atlas = ExtResource( 54 )
 region = Rect2( 160, 0, 40, 40 )
 
 [sub_resource type="AtlasTexture" id=7]
-atlas = ExtResource( 12 )
-region = Rect2( 33, 0, 33, 35 )
+atlas = ExtResource( 4 )
+region = Rect2( 120, 0, 40, 40 )
 
 [sub_resource type="AtlasTexture" id=8]
-atlas = ExtResource( 11 )
-region = Rect2( 0, 0, 40, 40 )
+atlas = ExtResource( 4 )
+region = Rect2( 80, 0, 40, 40 )
 
 [sub_resource type="AtlasTexture" id=9]
-atlas = ExtResource( 11 )
+atlas = ExtResource( 4 )
 region = Rect2( 40, 0, 40, 40 )
 
 [sub_resource type="AtlasTexture" id=10]
-atlas = ExtResource( 11 )
-region = Rect2( 120, 0, 40, 40 )
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 40, 40 )
 
 [sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 56 )
+region = Rect2( 0, 0, 40, 45 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 56 )
+region = Rect2( 40, 0, 40, 45 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 56 )
+region = Rect2( 80, 0, 40, 45 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 56 )
+region = Rect2( 120, 0, 40, 45 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 56 )
+region = Rect2( 160, 0, 40, 45 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 56 )
+region = Rect2( 200, 0, 40, 45 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 56 )
+region = Rect2( 240, 0, 40, 45 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 11 )
+region = Rect2( 0, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 11 )
+region = Rect2( 40, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 11 )
+region = Rect2( 120, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=21]
 atlas = ExtResource( 11 )
 region = Rect2( 80, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 4 )
-region = Rect2( 120, 0, 40, 40 )
-
-[sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 4 )
-region = Rect2( 80, 0, 40, 40 )
-
-[sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 4 )
-region = Rect2( 40, 0, 40, 40 )
-
-[sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 4 )
-region = Rect2( 0, 0, 40, 40 )
-
-[sub_resource type="AtlasTexture" id=16]
+[sub_resource type="AtlasTexture" id=22]
 atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=17]
+[sub_resource type="AtlasTexture" id=23]
 atlas = ExtResource( 6 )
 region = Rect2( 40, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=18]
+[sub_resource type="AtlasTexture" id=24]
 atlas = ExtResource( 6 )
 region = Rect2( 80, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=19]
+[sub_resource type="AtlasTexture" id=25]
 atlas = ExtResource( 6 )
 region = Rect2( 120, 0, 40, 40 )
 
-[sub_resource type="SpriteFrames" id=20]
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 12 )
+region = Rect2( 33, 0, 33, 35 )
+
+[sub_resource type="SpriteFrames" id=27]
 animations = [ {
 "frames": [ ExtResource( 40 ), ExtResource( 46 ), ExtResource( 38 ), ExtResource( 42 ), ExtResource( 39 ), ExtResource( 32 ), ExtResource( 25 ), ExtResource( 33 ) ],
 "loop": true,
@@ -142,11 +182,6 @@ animations = [ {
 "name": "hurt",
 "speed": 10.0
 }, {
-"frames": [ SubResource( 7 ) ],
-"loop": true,
-"name": "Grind",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 49 ), ExtResource( 10 ), ExtResource( 7 ), ExtResource( 3 ), ExtResource( 9 ), ExtResource( 14 ), ExtResource( 5 ), ExtResource( 1 ) ],
 "loop": true,
 "name": "Run4",
@@ -157,37 +192,47 @@ animations = [ {
 "name": "Run2",
 "speed": 15.0
 }, {
-"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 10 ), SubResource( 9 ), SubResource( 8 ) ],
-"loop": true,
-"name": "Crouch",
-"speed": 10.0
-}, {
 "frames": [ ExtResource( 43 ), ExtResource( 21 ), ExtResource( 24 ), ExtResource( 47 ), ExtResource( 48 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ) ],
 "loop": true,
 "name": "Run3",
 "speed": 18.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "Spindash",
+"speed": 15.0
 }, {
 "frames": [ ExtResource( 26 ), ExtResource( 44 ), ExtResource( 27 ), ExtResource( 22 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ) ],
 "loop": true,
 "name": "Walk",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
-"name": "Spindash",
-"speed": 15.0
+"name": "railTrick",
+"speed": 20.0
 }, {
-"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 20 ), SubResource( 19 ), SubResource( 18 ) ],
+"loop": true,
+"name": "Crouch",
+"speed": 10.0
+}, {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ) ],
 "loop": true,
 "name": "Roll",
 "speed": 16.0
+}, {
+"frames": [ SubResource( 26 ) ],
+"loop": true,
+"name": "Grind",
+"speed": 5.0
 } ]
 
-[sub_resource type="Gradient" id=21]
+[sub_resource type="Gradient" id=28]
 offsets = PoolRealArray( 0.0927152, 0.390728 )
 colors = PoolColorArray( 0.00990295, 0.0960615, 0.230469, 0, 0, 0.320313, 1, 1 )
 
-[sub_resource type="SpriteFrames" id=22]
+[sub_resource type="SpriteFrames" id=29]
 animations = [ {
 "frames": [ ExtResource( 13 ), ExtResource( 8 ), ExtResource( 2 ), ExtResource( 15 ) ],
 "loop": true,
@@ -195,34 +240,37 @@ animations = [ {
 "speed": 25.0
 } ]
 
-[sub_resource type="Gradient" id=23]
+[sub_resource type="Gradient" id=30]
 offsets = PoolRealArray( 0, 0.0180723, 0.46988 )
 colors = PoolColorArray( 0.99295, 1, 0.871094, 1, 0.945313, 1, 0, 1, 1, 0, 0, 1 )
 
-[sub_resource type="GradientTexture" id=24]
-gradient = SubResource( 23 )
+[sub_resource type="GradientTexture" id=31]
+gradient = SubResource( 30 )
 
-[sub_resource type="Curve" id=25]
+[sub_resource type="Curve" id=32]
 _data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.0899471, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.374359, 0 ), 0.0, 0.0, 0, 0 ]
 
-[sub_resource type="CurveTexture" id=26]
-curve = SubResource( 25 )
+[sub_resource type="CurveTexture" id=33]
+curve = SubResource( 32 )
 
-[sub_resource type="ParticlesMaterial" id=27]
+[sub_resource type="ParticlesMaterial" id=34]
 lifetime_randomness = 1.0
+trail_divisor = 3
 flag_align_y = true
 flag_disable_z = true
 direction = Vector3( 0, -20, 0 )
-spread = 180.0
+spread = 76.15
 gravity = Vector3( 0, 0, 0 )
 initial_velocity = 100.0
 initial_velocity_random = 1.0
 orbit_velocity = 0.0
 orbit_velocity_random = 1.0
+damping = 90.38
+damping_random = 1.0
 scale = 4.0
 scale_random = 1.0
-scale_curve = SubResource( 26 )
-color_ramp = SubResource( 24 )
+scale_curve = SubResource( 33 )
+color_ramp = SubResource( 31 )
 
 [node name="Player" type="Area2D"]
 collision_layer = 4
@@ -232,6 +280,7 @@ boost_sfx = ExtResource( 17 )
 stomp_sfx = ExtResource( 16 )
 stomp_land_sfx = ExtResource( 18 )
 bounceRing = ExtResource( 55 )
+boostParticle = ExtResource( 57 )
 SKID_ACCEL = 0.1
 JUMP_VELOCITY = 4.0
 
@@ -263,8 +312,8 @@ __meta__ = {
 }
 
 [node name="PlayerSprites" type="AnimatedSprite" parent="."]
-frames = SubResource( 20 )
-animation = "Run2"
+frames = SubResource( 27 )
+animation = "idle"
 frame = 4
 playing = true
 flip_h = true
@@ -299,18 +348,20 @@ cast_to = Vector2( 50, 0 )
 
 [node name="BoostLine" type="Line2D" parent="."]
 visible = false
+light_mask = 0
 z_index = -2
 points = PoolVector2Array( 0, 0, -200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
 width = 20.0
 default_color = Color( 0.4, 0.501961, 1, 0 )
-gradient = SubResource( 21 )
+gradient = SubResource( 28 )
 texture_mode = 4124
 joint_mode = 2
 
 [node name="BoostSprite" type="AnimatedSprite" parent="."]
 visible = false
 modulate = Color( 1, 1, 1, 0.78451 )
-frames = SubResource( 22 )
+light_mask = 0
+frames = SubResource( 29 )
 frame = 1
 playing = true
 
@@ -323,8 +374,14 @@ stream = ExtResource( 53 )
 volume_db = 3.438
 
 [node name="GrindParticles" type="Particles2D" parent="."]
-position = Vector2( 0.382431, 13.8875 )
+light_mask = 0
+position = Vector2( 1.38243, 13.8875 )
 amount = 500
 randomness = 1.0
 local_coords = false
-process_material = SubResource( 27 )
+process_material = SubResource( 34 )
+
+[node name="Voice" type="AudioStreamPlayer2D" parent="."]
+script = ExtResource( 58 )
+hurt = [ ExtResource( 61 ), ExtResource( 59 ), ExtResource( 67 ), ExtResource( 66 ), ExtResource( 63 ) ]
+effort = [ ExtResource( 65 ), ExtResource( 64 ), ExtResource( 60 ), ExtResource( 62 ) ]
