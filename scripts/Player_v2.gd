@@ -597,13 +597,13 @@ func gndProcess():
 
 var lastPos = Vector2(0,0)
 
-func _process(delta):
+func _process(_delta):
 	if invincible > 0:
 		sprite1.modulate = Color(1,1,1,1-(invincible % 30)/30.0)
 	else:
 		hurt = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	"""calculate Sonic's physics, controls, and all that fun stuff"""
 	if invincible > 0:
 		invincible -= 1
@@ -718,7 +718,7 @@ func setCollisionLayer(value):
 	RightCastTop.set_collision_mask_bit(0,not backLayer)
 	RightCastTop.set_collision_mask_bit(1,backLayer)
 
-func _flipLayer(body):
+func _flipLayer(_body):
 	# toggle between layers
 	setCollisionLayer(not backLayer)
 	pass # replace with function body
@@ -811,5 +811,5 @@ func hurt_player():
 			if t == 16:
 				speed = 2
 				angle = 101.25
-			get_node("/root/Node2D").add_child(currentRing)
+			get_node("/root/Node2D").call_deferred("add_child",currentRing)
 		ringCounter.ringCount = 0
