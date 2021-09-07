@@ -610,7 +610,8 @@ func _physics_process(_delta):
 	# reset using the dedicated reset button
 	if Input.is_action_pressed('restart'):
 		resetGame()
-		get_tree().reload_current_scene()
+		if get_tree().reload_current_scene() != OK:
+			print("ERROR: Could not reload current scene!")
 	
 	grindParticles.emitting = grinding
 	
@@ -740,7 +741,8 @@ func _layer1(area):
 func _on_DeathPlane_area_entered(area):
 	if self == area:
 		resetGame()
-		get_tree().reload_current_scene()
+		if get_tree().reload_current_scene() != OK: 
+			print("ERROR: Could not reload current scene!")
 func resetGame():
 	# reset your position and state if you pull a dimps (fall out of the world)
 	velocity1 = Vector2(0,0)

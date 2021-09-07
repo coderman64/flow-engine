@@ -17,7 +17,7 @@ func _ready():
 	if _autoPlay:
 		play(0)
 
-func _process(delta):
+func _process(_delta):
 	# set the loopback flag if we are in the loopable section
 	if get_playback_position() > loopbackTime:
 		loopbackFlag = true

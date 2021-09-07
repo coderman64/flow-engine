@@ -24,7 +24,7 @@ func _ready():
 		add_child(barItems[i])
 
 
-func _process(delta):
+func _process(_delta):
 	if visualBar < boostAmount and visualBar <= 60:
 		visualBar += 0.5;
 		barItems[floor(fmod(visualBar-2,20))].rect_scale.x = 4

@@ -32,14 +32,14 @@ func _ready():
 	downCast = get_node("DownCast")
 
 
-func _process(delta):
+func _process(_delta):
 	# make the sprite invisible once the ring has been collected and
 	# the sparkle animation is over
 	if collected and sprite.animation == "Sparkle" and \
 		sprite.frame >= 6:
 		visible = false
 
-func _physics_process(delta):
+func _physics_process(_delta):
 	
 	# count down the timer
 	collectionStartTimer -= 1

@@ -21,7 +21,7 @@ func _ready():
 	boomSound = get_node("BoomSound")
 
 
-func _process(delta):
+func _process(_delta):
 	
 	if alive:
 		# a stupid simple AI routine. Simply move x by -0.1 pixels per frame

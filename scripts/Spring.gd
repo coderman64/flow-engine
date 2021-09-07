@@ -64,7 +64,7 @@ func _on_Area2D_area_entered(area):
 		# scale the spring (only applies if "ringScale" is enabled)
 		scaling = 2
 
-func _process(delta):
+func _process(_delta):
 	# set and lerp scale if ringScale is enabled
 	if ringScale:
 		scale = Vector2(scaling,scaling)
