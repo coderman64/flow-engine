@@ -413,9 +413,11 @@ func airProcess():
 	if LSideCast.is_colliding() and VecDist(LSideCast.get_collision_point(),position+velocity1) < 14 and velocity1.x < 0:
 		velocity1 = Vector2(0,velocity1.y)
 		position = LSideCast.get_collision_point() + Vector2(14,0)
+		boosting = false
 	if RSideCast.is_colliding() and VecDist(RSideCast.get_collision_point(),position+velocity1) < 14 and velocity1.x > 0:
 		velocity1 = Vector2(0,velocity1.y)
 		position = RSideCast.get_collision_point() - Vector2(14,0)
+		boosting = false
 		
 	# top collision
 	if VecDist(avgTPoint,position+velocity1) < 21:
@@ -501,9 +503,11 @@ func gndProcess():
 	if LSideCast.is_colliding() and VecDist(LSideCast.get_collision_point(),position) < 21 and gVel < 0:
 		gVel = 0
 		position = LSideCast.get_collision_point() + Vector2(position.x-LSideCast.get_collision_point().x,position.y-LSideCast.get_collision_point().y).normalized()*21
+		boosting = false
 	if RSideCast.is_colliding() and VecDist(RSideCast.get_collision_point(),position) < 21 and gVel > 0:
 		gVel = 0
 		position = RSideCast.get_collision_point() + Vector2(position.x-RSideCast.get_collision_point().x,position.y-RSideCast.get_collision_point().y).normalized()*21
+		boosting = false
 	
 	# apply gravity if you are on a slope, and apply the ground velocity
 	gVel += sin(rotation)*GRAVITY
