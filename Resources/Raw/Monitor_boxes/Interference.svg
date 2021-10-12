@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="162"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   version="1.0"
+   sodipodi:docname="Interference.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/stuart/tmp/MonitorBox.png"
+   inkscape:export-xdpi="22.629999"
+   inkscape:export-ydpi="22.629999">
+  <title
+     id="title15">Item Monitor (interference)</title>
+  <defs
+     id="defs4">
+    <filter
+       style="color-interpolation-filters:sRGB;"
+       inkscape:label="Noise Fill"
+       id="filter140">
+      <feTurbulence
+         type="turbulence"
+         baseFrequency="2.54967 2.58436"
+         numOctaves="5"
+         seed="1"
+         result="turbulence"
+         id="feTurbulence124" />
+      <feComposite
+         in="SourceGraphic"
+         in2="turbulence"
+         operator="in"
+         result="composite1"
+         id="feComposite126" />
+      <feColorMatrix
+         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 3 -1 "
+         result="color"
+         id="feColorMatrix128" />
+      <feFlood
+         flood-opacity="1"
+         flood-color="rgb(139,140,140)"
+         result="flood"
+         id="feFlood130" />
+      <feMerge
+         result="merge"
+         id="feMerge136">
+        <feMergeNode
+           in="flood"
+           id="feMergeNode132" />
+        <feMergeNode
+           in="color"
+           id="feMergeNode134" />
+      </feMerge>
+      <feComposite
+         in2="SourceGraphic"
+         operator="in"
+         result="composite2"
+         id="feComposite138" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="5.1117635"
+     inkscape:cx="64.257382"
+     inkscape:cy="80.677497"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="997"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     borderlayer="true"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Stuart Moore</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:title>Item Monitor (interference)</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(0,-8)">
+    <g
+       id="g3404"
+       transform="matrix(0.97575697,0,0,0.96501372,-1.8635918,6.973834)">
+      <ellipse
+         transform="matrix(0.1443628,0,0,0.1443628,-122.23398,52.074204)"
+         id="MonitorStalk"
+         style="fill:#c4c4c4;fill-opacity:1;stroke:none"
+         cx="1314.2858"
+         cy="458.07648"
+         rx="151.42857"
+         ry="314.28571" />
+      <rect
+         y="145.42612"
+         x="8.1050148"
+         height="23.510513"
+         width="118.78996"
+         id="MonitorBase"
+         style="fill:#e3e3e3;fill-opacity:1;stroke:none" />
+      <rect
+         y="1.0633693"
+         x="1.909893"
+         height="120.02718"
+         width="131.18021"
+         id="rect3155"
+         style="fill:#d5d5d5;fill-opacity:1;stroke:none" />
+      <rect
+         y="10.16888"
+         x="7.2249527"
+         height="101.81616"
+         width="120.55009"
+         id="rect3159"
+         style="fill:#101010;fill-opacity:1;stroke:none;filter:url(#filter140)" />
+      <g
+         transform="matrix(0.1443628,0,0,0.1443628,103.59481,13.569593)"
+         id="MonitorLights">
+        <rect
+           style="fill:#e30000;fill-opacity:1;stroke:none"
+           id="MonitorLight_Red"
+           width="31.827288"
+           height="31.827288"
+           x="85.909729"
+           y="697.0144" />
+        <rect
+           style="fill:#00e300;fill-opacity:1;stroke:none"
+           id="MonitorLight_Green"
+           width="31.827288"
+           height="31.827288"
+           x="134.65155"
+           y="697.0144" />
+      </g>
+    </g>
+  </g>
+</svg>

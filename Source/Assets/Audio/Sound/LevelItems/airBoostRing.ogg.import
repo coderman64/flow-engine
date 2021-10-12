@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/airBoostRing.ogg-55789cc3d0cc92b971fb086f2a1957d5.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound/LevelItems/airBoostRing.ogg"
+dest_files=[ "res://.import/airBoostRing.ogg-55789cc3d0cc92b971fb086f2a1957d5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

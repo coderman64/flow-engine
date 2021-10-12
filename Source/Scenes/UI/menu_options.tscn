@@ -1,0 +1,115 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Assets/UI/theme_default.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/UI/menu_options.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Fonts/IBMPlexMono-Regular-16.tres" type="DynamicFont" id=3]
+
+[node name="menu_options" type="VBoxContainer"]
+pause_mode = 2
+margin_left = 64.0
+margin_right = 964.0
+margin_bottom = 576.0
+focus_mode = 2
+theme = ExtResource( 1 )
+custom_constants/separation = 12
+alignment = 1
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Options menu for the game/app."
+}
+
+[node name="header_text" type="Label" parent="."]
+margin_top = 175.0
+margin_right = 900.0
+margin_bottom = 197.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+text = "OPTIONS"
+align = 1
+valign = 1
+
+[node name="options_tabholder" type="TabContainer" parent="."]
+margin_top = 209.0
+margin_right = 900.0
+margin_bottom = 361.0
+tab_align = 0
+
+[node name="Options" type="VBoxContainer" parent="options_tabholder"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = 40.0
+margin_right = -4.0
+margin_bottom = -4.0
+
+[node name="btn_fullscreencheck" type="CheckBox" parent="options_tabholder/Options"]
+margin_right = 892.0
+margin_bottom = 30.0
+hint_tooltip = "Toggle between using the full screen or not"
+text = "FULL SCREEN"
+
+[node name="volume_master" type="HSplitContainer" parent="options_tabholder/Options"]
+margin_top = 34.0
+margin_right = 892.0
+margin_bottom = 56.0
+split_offset = 16
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="options_tabholder/Options/volume_master"]
+margin_right = 206.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 3 )
+text = "Master Volume: 000%"
+
+[node name="volume_master_slider" type="HSlider" parent="options_tabholder/Options/volume_master"]
+margin_left = 206.0
+margin_right = 892.0
+margin_bottom = 16.0
+max_value = 1.0
+step = 0.05
+
+[node name="volume_music" type="HSplitContainer" parent="options_tabholder/Options"]
+margin_top = 60.0
+margin_right = 892.0
+margin_bottom = 82.0
+split_offset = 16
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="options_tabholder/Options/volume_music"]
+margin_right = 206.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 3 )
+text = "Music Volume:  000%"
+
+[node name="volume_music_slider" type="HSlider" parent="options_tabholder/Options/volume_music"]
+margin_left = 206.0
+margin_right = 892.0
+margin_bottom = 16.0
+max_value = 1.0
+step = 0.05
+
+[node name="volume_sound" type="HSplitContainer" parent="options_tabholder/Options"]
+margin_top = 86.0
+margin_right = 892.0
+margin_bottom = 108.0
+split_offset = 16
+dragger_visibility = 2
+
+[node name="Label" type="Label" parent="options_tabholder/Options/volume_sound"]
+margin_right = 206.0
+margin_bottom = 22.0
+custom_fonts/font = ExtResource( 3 )
+text = "Sound Volume:  000%"
+
+[node name="volume_sound_slider" type="HSlider" parent="options_tabholder/Options/volume_sound"]
+margin_left = 206.0
+margin_right = 892.0
+margin_bottom = 16.0
+max_value = 1.0
+step = 0.05
+
+[node name="btn_goback" type="Button" parent="."]
+margin_top = 373.0
+margin_right = 900.0
+margin_bottom = 401.0
+text = "BACK"

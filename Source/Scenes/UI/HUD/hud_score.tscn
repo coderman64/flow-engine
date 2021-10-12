@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Graphics/UI/HUD/hud_score.svg" type="Texture" id=1]
+[ext_resource path="res://Assets/Fonts/NiseSegaSonic-Regular-30.tres" type="DynamicFont" id=2]
+
+[node name="hud_score" type="Sprite"]
+texture = ExtResource( 1 )
+centered = false
+
+[node name="count" type="Label" parent="."]
+margin_left = 184.0
+margin_right = 253.0
+margin_bottom = 31.0
+custom_fonts/font = ExtResource( 2 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}

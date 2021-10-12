@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scripts/UI/HUD/game_hud.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UI/HUD/hud_rings.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/UI/HUD/hud_score.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/UI/HUD/hud_timer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/UI/HUD/hud_lives.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/UI/HUD/hud_boost.tscn" type="PackedScene" id=6]
+
+[node name="game_hud" type="CanvasLayer"]
+layer = 32
+script = ExtResource( 1 )
+
+[node name="hud_rings" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 8 )
+
+[node name="hud_score" parent="." instance=ExtResource( 3 )]
+position = Vector2( 8, 40 )
+
+[node name="hud_timer" parent="." instance=ExtResource( 4 )]
+position = Vector2( 8, 72 )
+
+[node name="hud_lives" parent="." instance=ExtResource( 5 )]
+position = Vector2( 8, 512 )
+
+[node name="hud_boost" parent="." instance=ExtResource( 6 )]
+margin_left = 16.0
+margin_top = 446.0
+margin_right = 736.0
+margin_bottom = 566.0
+rect_scale = Vector2( 0.35, 0.35 )

@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/UI/theme_default.tres" type="Theme" id=2]
+[ext_resource path="res://Scenes/UI/menu_main.tscn" type="PackedScene" id=4]
+
+[node name="main_menu" type="Control"]
+theme = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Holding scene for the main menu. menu_main.tscn does all the heavy lifting."
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 1024.0
+margin_bottom = 576.0
+rect_scale = Vector2( 0.25, 0.25 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_main" parent="." instance=ExtResource( 4 )]

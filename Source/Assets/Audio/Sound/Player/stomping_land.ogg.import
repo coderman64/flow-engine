@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/stomping_land.ogg-c888bd32785e671c74400842cd954176.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound/Player/stomping_land.ogg"
+dest_files=[ "res://.import/stomping_land.ogg-c888bd32785e671c74400842cd954176.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

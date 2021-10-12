@@ -1,0 +1,46 @@
+Use sub-dirs named by character, concept, usage etc.
+
+<Project Name> - project root.
+	Builds - executable builds are created here.
+	Docs - design notes and the like are kept in here.
+	Resources - Raw resources for assets used by the project. NOT used directly by the project source.
+	Source - the source files for the project. The project.godot file is in here.
+		addons - do not use directly; used for external Godot addons that are NOT GDNative.
+		Assets - All physical assets - graphics, models, shaders, music etc. Store by category/usage.
+			Audio - All sound files.
+				Ambient - all looped sound effects. Filenames should include loop offset.
+				Jingles - non-looped music files to be used for stings and things like starting a new game, ending an act, game over etc.
+				Music - all looped music. Filenames should include loop offset.
+				Sound - all non-looped sound effects.
+			Common - non-audio, non-font assets used by multiple things.
+			Fonts - fonts used throughout the game.
+			Graphics - All graphical elements here, including shaders.
+			Other - any other resource that might not fit any of the other categories.
+			UI - Theme definitions for the user interface are stored here.
+		GDNative - do not use directly; used for external Godot addons that ARE GDNative (e.g. external libraries, bindings for other languages), in separate folders for each.
+		Scenes - all the "scenes" used in the game. Should mirror Scripts.
+			Singletons - non-game(play) related scenes. For autoload/general-purpose singletons that contain nodes/scripts for convenience use.
+		Scripts - all the scripts used in the game. Should mirror Scenes.
+			Singletons - non-game(play) related scripts. For autoload/general-purpose singletons that contain nodes/scripts for convenience use.
+
+Audio bus structure:
+Master
+	Jingles
+	Music
+	SFX - unlooped sound effects.
+	Ambient - looped sound effects.
+DON'T add effects to Jingles/Music/SFX directly - create separate buses as needed for this!
+
+Default physics/rendering layers:
+2D rendering: 1 = layer_render_default
+2D physics: 1 = layer_physics_default; 20 = layer_physics_disabled
+
+For functions called by/connected to signals, use the function name styled as <nodename>_on_<signal type>, e.g. btnQuit_on_press
+
+Autoload bus structure:
+	helper_functions
+	random_helpers
+	sound_player
+	music_player
+	jingle_player
+	config_helper

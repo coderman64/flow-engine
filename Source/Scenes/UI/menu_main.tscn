@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/UI/theme_default.tres" type="Theme" id=1]
+[ext_resource path="res://Scripts/UI/menu_main.gd" type="Script" id=2]
+
+[node name="menu_main" type="VBoxContainer"]
+margin_left = 128.0
+margin_top = 320.0
+margin_right = 896.0
+margin_bottom = 512.0
+focus_mode = 2
+theme = ExtResource( 1 )
+custom_constants/separation = 12
+alignment = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false,
+"_editor_description_": "Default main menu for a game/app."
+}
+
+[node name="btnNewGame" type="Button" parent="."]
+margin_top = 84.0
+margin_right = 768.0
+margin_bottom = 112.0
+hint_tooltip = "Start a new game!"
+text = "NEW GAME"
+
+[node name="btnOptions" type="Button" parent="."]
+margin_top = 124.0
+margin_right = 768.0
+margin_bottom = 152.0
+hint_tooltip = "Choose options such as screen size, volume etc."
+text = "OPTIONS"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btnQuit" type="Button" parent="."]
+margin_top = 164.0
+margin_right = 768.0
+margin_bottom = 192.0
+hint_tooltip = "Leave the game!"
+text = "QUIT"

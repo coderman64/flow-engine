@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="128"
+   height="162"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   version="1.0"
+   sodipodi:docname="Shield_Water.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape"
+   inkscape:export-filename="/home/stuart/tmp/MonitorBox_Rings.png"
+   inkscape:export-xdpi="34.290001"
+   inkscape:export-ydpi="34.290001">
+  <title
+     id="title122">Items Monitor (water shield)</title>
+  <defs
+     id="defs4">
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient1709"
+       id="radialGradient3331"
+       gradientUnits="userSpaceOnUse"
+       cx="41.217018"
+       cy="36.04406"
+       fx="42.015064"
+       fy="36.314224"
+       r="26.079197"
+       gradientTransform="translate(25.91302,-11.94478)" />
+    <linearGradient
+       id="linearGradient1709">
+      <stop
+         style="stop-color:#0000ff;stop-opacity:1;"
+         offset="0"
+         id="stop1710" />
+      <stop
+         style="stop-color:#000060;stop-opacity:1;"
+         offset="1"
+         id="stop1711" />
+    </linearGradient>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     gridtolerance="10000"
+     guidetolerance="10"
+     objecttolerance="10"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="4.6929373"
+     inkscape:cx="67.715343"
+     inkscape:cy="84.909152"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="997"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1"
+     borderlayer="true"
+     inkscape:document-rotation="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Stuart Moore</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:title>Items Monitor (water shield)</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline"
+     transform="translate(0,-8)">
+    <g
+       id="g3884"
+       transform="matrix(0.97390095,0,0,0.96357871,-1.7383104,7.0958099)">
+      <ellipse
+         transform="matrix(0.1443628,0,0,0.1443628,-122.23398,52.074204)"
+         id="MonitorStalk"
+         style="fill:#c4c4c4;fill-opacity:1;stroke:#000000;stroke-width:1.7317481;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         cx="1314.2858"
+         cy="458.07648"
+         rx="151.42857"
+         ry="314.28571" />
+      <rect
+         y="145.42612"
+         x="8.1050148"
+         height="23.510513"
+         width="118.78996"
+         id="MonitorBase"
+         style="fill:#e3e3e3;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="1.0633693"
+         x="1.909893"
+         height="120.02718"
+         width="131.18021"
+         id="rect3155"
+         style="fill:#d5d5d5;fill-opacity:1;stroke:#000000;stroke-width:0.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         y="9.0493402"
+         x="7.2249527"
+         height="101.81616"
+         width="120.55009"
+         id="rect3159"
+         style="fill:#101010;fill-opacity:1;stroke:none;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <g
+         transform="matrix(0.1443628,0,0,0.1443628,103.59481,13.569593)"
+         id="MonitorLights">
+        <rect
+           style="opacity:1;fill:#e30000;fill-opacity:1;stroke:none;stroke-width:0.1727114;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="MonitorLight_Red"
+           width="31.827288"
+           height="31.827288"
+           x="85.909729"
+           y="697.0144" />
+        <rect
+           style="opacity:1;fill:#00e300;fill-opacity:1;stroke:none;stroke-width:0.1727114;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+           id="MonitorLight_Green"
+           width="31.827288"
+           height="31.827288"
+           x="134.65155"
+           y="697.0144" />
+      </g>
+      <g
+         transform="translate(-544.78803,-331.06656)"
+         id="g3876">
+        <circle
+           transform="matrix(2.5735977,0,0,2.5735977,502.10431,289.91732)"
+           style="display:block;fill:#0000c4;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+           id="path3872"
+           cx="42.813107"
+           cy="39.286118"
+           r="17.29097" />
+        <path
+           style="display:block;fill:url(#radialGradient3331);fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+           d="m 612.28802,346.52398 c -24.564,0 -44.49997,19.936 -44.5,44.5 0,24.564 19.93603,44.5 44.5,44.5 24.564,0 44.50004,-19.936 44.50001,-44.5 0,-24.564 -19.93598,-44.5 -44.50001,-44.5 z m 0,4.5 c 10.92228,24.99493 27.5625,39.84914 27.5625,54.125 -10e-6,14.27585 -12.33492,25.875 -27.5625,25.875 -15.22762,0 -27.59375,-11.59914 -27.59375,-25.875 1e-5,-14.27587 19.53402,-30.81238 27.59375,-54.125 z"
+           id="path3504"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+  </g>
+</svg>

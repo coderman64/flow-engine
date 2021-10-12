@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/21_V_SNC_035_c.ogg-c73f8bcd30017e71a0201f9c02965db2.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound/Player/Sonic/Hurt/21_V_SNC_035_c.ogg"
+dest_files=[ "res://.import/21_V_SNC_035_c.ogg-c73f8bcd30017e71a0201f9c02965db2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

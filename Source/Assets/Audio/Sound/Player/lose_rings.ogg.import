@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/lose_rings.ogg-240f21db347e8842a007fc9113385831.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound/Player/lose_rings.ogg"
+dest_files=[ "res://.import/lose_rings.ogg-240f21db347e8842a007fc9113385831.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
