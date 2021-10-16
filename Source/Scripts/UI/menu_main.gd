@@ -16,7 +16,9 @@ func _ready () -> void:
 ## btnNewGame_on_press
 # Starts a new game!
 func btnNewGame_on_press () -> void:
-	helper_functions._whocares = helper_functions.change_scene ("res://Scenes/Levels/ChaosFestival.tscn")
+	if (not helper_functions.change_scene ("res://Scenes/Levels/ChaosFestival.tscn") == OK):
+		printerr ("Unable to load the test level!")
+		get_tree ().quit ()
 	return
 
 ## btnOptions_on_press

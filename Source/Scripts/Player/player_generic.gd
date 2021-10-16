@@ -226,7 +226,9 @@ func reset_game () -> void:
 	reset_character ()
 	game_space.reset_game_space ()
 	game_space.get_node ("level_timer").stop ()
-	helper_functions._whocares = helper_functions.change_scene ("res://Scenes/UI/main_menu.tscn")
+	if (not helper_functions.change_scene ("res://Scenes/UI/main_menu.tscn") == OK):
+		printerr ("Unable to load the main menu!")
+		get_tree ().quit ()
 	music_player.stop_music ()
 	return
 

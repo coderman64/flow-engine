@@ -14,5 +14,7 @@ func _ready () -> void:
 	sound_player.add_sound_to_library ("res://Assets/Audio/Sound/Player/Death.ogg", "player_death")
 	sound_player.add_sound_to_library ("res://Assets/Audio/Sound/Player/jump.ogg", "player_jump")
 	sound_player.add_sound_to_library ("res://Assets/Audio/Sound/LevelItems/ring.ogg", "ring_get")
-	helper_functions._whocares = helper_functions.change_scene ("res://Scenes/UI/main_menu.tscn")
+	if (not helper_functions.change_scene ("res://Scenes/UI/main_menu.tscn") == OK):
+		printerr ("ERROR: Unable to load the main scene!")
+		get_tree ().quit ()
 	return
