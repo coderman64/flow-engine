@@ -1,7 +1,8 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scenes/LevelItems/Checkpoint.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm.tres" type="TileSet" id=2]
+[ext_resource path="res://Scripts/Levels/chaos_festival.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Graphics/Backgrounds/Festival/Castle.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Graphics/Backgrounds/Festival/Villa.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/LevelItems/Spring.tscn" type="PackedScene" id=7]
@@ -11,7 +12,6 @@
 [ext_resource path="res://Scenes/Enemies/EggPawn.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Scenes/LevelItems/Rail.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Scenes/LevelItems/RingSpawner.tscn" type="PackedScene" id=14]
-[ext_resource path="res://Scripts/Levels/level_generic.gd" type="Script" id=15]
 [ext_resource path="res://Scenes/LevelItems/lamp.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Graphics/Effects/light.png" type="Texture" id=17]
 
@@ -59,8 +59,16 @@ _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 119.476, 58.3504, -115.817, 76.6173, 115.817, -76.6173, 549.873, -4.86755, 5.34539, 49.8903, -5.34539, -49.8903, 505.328, -548.316, -117.599, 39.1995, 117.599, -39.1995, 603.325, -742.532, -52.0449, -20.7631, 52.0449, 20.7631, 847.405, -741.708, -25.3903, -53.4813, 25.3903, 53.4813, 938.405, -648.208, -57.5, -1.5, 57.5, 1.5, 1042.41, -582.208 )
 }
 
+[sub_resource type="Environment" id=11]
+background_mode = 4
+glow_enabled = true
+glow_intensity = 0.1
+adjustment_enabled = true
+adjustment_brightness = 0.9
+adjustment_contrast = 1.2
+
 [node name="Level" type="Node2D"]
-script = ExtResource( 15 )
+script = ExtResource( 3 )
 music_file = "res://Assets/Audio/Music/MeepMeep.ogg"
 
 [node name="TileMap2" type="TileMap" parent="."]
@@ -426,3 +434,6 @@ position = Vector2( -2592, -16 )
 
 [node name="Checkpoint" parent="." instance=ExtResource( 1 )]
 position = Vector2( 4736, -16 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 11 )

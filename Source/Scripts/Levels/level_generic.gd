@@ -11,9 +11,6 @@ func _ready () -> void:
 	if (not has_node ("/root/Level/game_hud")):	# Make sure the HUD is added to the level space.
 		helper_functions.add_path_to_node ("res://Scenes/UI/HUD/game_hud.tscn", "/root/Level")
 		yield (get_tree (), "idle_frame")		# And make sure they're added before continuing...
-	if (not has_node ("/root/Level/Player")):	# No player? Add them to the scene.
-		helper_functions.add_path_to_node ("res://Scenes/Player/player_sonic.tscn", "/root/Level")
-		yield (get_tree (), "idle_frame")		# And make sure they're added before continuing...
 	if (OS.is_debug_build ()):					# Running in debug mode?
 		helper_functions.add_path_to_node ("res://Scenes/UI/HUD/debug_hud.tscn", "/root/Level")
 		yield (get_tree (), "idle_frame")		# And make sure they're added before continuing...
