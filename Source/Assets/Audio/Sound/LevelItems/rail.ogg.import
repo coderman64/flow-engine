@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/rail.ogg-eb8aebc1d3e8a648494e8cf681c84de0.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound/LevelItems/rail.ogg"
+dest_files=[ "res://.import/rail.ogg-eb8aebc1d3e8a648494e8cf681c84de0.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,17 @@
+Sonic collision shape (CapsuleShape2D)
+radius = 10
+height = 20
+
+if (abs (avgGPoint.y-position.y) < 21): - this *appears* to be "collison shape height + 1"?
+
+position = Vector2 (avgGPoint.x + 20 * sin (rotation), avgGPoint.y - 20 * cos (rotation)) - avgGPoint.x might be "collision shape radius * 2"?
+
+LeftCast.get_collision_point ().x + cos (rotation) * 8, - this appears to be unconnected to the collision shape values.
+
+Highest degree of confidence with "21", as it seems to be only y-component related.
+
+if (RSideCast.is_colliding () and RSideCast.get_collision_point ().distance_to (position+player_velocity) < 14 and player_velocity.x > 0): and position = RSideCast.get_collision_point () - Vector2 (14, 0) - what does the 14 represent? Where does it come from? This value is used with "handle left and right sideways collision". If the distance from colliding with a wall sideways to the position plus velocity is less than 14 pixels, then position is shifted by that collision point minus 14 (opposite way for left-hand sideways). It seems to be (collision radius * 1.4)? But this would result in very large gaps if the collision radius was, say, 20 or more. So is it collision radius + 4? This does seem more likely (at least, more likely than collision radius * 1.4 does...).
+
+Question is, then, why would it be collision radius + 4 (or even * 1.4)? The default distance from a wall for the player (say, the collison wall at the start of ChaosFestival.tscn) is 21 pixels. So where does the 14 come into it, why the 7 difference? Things seem to be dealt with in multiples of 7? Sideways collision appears to be 14 pixels. Wall collision is 21 pixels.
+
+It feels like I'm approaching all of this from the wrong direction. We shall see.

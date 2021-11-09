@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/JehJehRocket.ogg-d652f43c1d77e49f267a4779ae8e7cac.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Music/JehJehRocket.ogg"
+dest_files=[ "res://.import/JehJehRocket.ogg-d652f43c1d77e49f267a4779ae8e7cac.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=13.25

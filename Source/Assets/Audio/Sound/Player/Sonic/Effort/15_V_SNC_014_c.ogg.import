@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/15_V_SNC_014_c.ogg-bd063f0a676582b485c35b5404b40872.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound/Player/Sonic/Effort/15_V_SNC_014_c.ogg"
+dest_files=[ "res://.import/15_V_SNC_014_c.ogg-bd063f0a676582b485c35b5404b40872.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

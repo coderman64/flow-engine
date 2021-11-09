@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/boom.ogg-762355b0fc37adf2e182f757a36922b4.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Sound/Enemies/boom.ogg"
+dest_files=[ "res://.import/boom.ogg-762355b0fc37adf2e182f757a36922b4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

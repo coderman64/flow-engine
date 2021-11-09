@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Extra_Life.ogg-eea41f6e6ea6be3c95ffd5eb4e7dfe3b.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Jingles/Extra_Life.ogg"
+dest_files=[ "res://.import/Extra_Life.ogg-eea41f6e6ea6be3c95ffd5eb4e7dfe3b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

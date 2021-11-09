@@ -1,0 +1,169 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://Scenes/Player/sprite_player_sonic.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Player/sprite_boost.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/Audio/Sound/Player/stomping.ogg" type="AudioStream" id=16]
+[ext_resource path="res://Assets/Audio/Sound/Player/Boost.ogg" type="AudioStream" id=17]
+[ext_resource path="res://Assets/Audio/Sound/Player/stomping_land.ogg" type="AudioStream" id=18]
+[ext_resource path="res://Scripts/Player/player_sonic.gd" type="Script" id=19]
+[ext_resource path="res://Assets/Audio/Sound/LevelItems/rail.ogg" type="AudioStream" id=53]
+[ext_resource path="res://Scenes/LevelItems/BounceRing.tscn" type="PackedScene" id=55]
+[ext_resource path="res://Scenes/Player/BoostParticle.tscn" type="PackedScene" id=57]
+[ext_resource path="res://Scripts/Player/voices.gd" type="Script" id=58]
+[ext_resource path="res://Assets/Audio/Sound/Player/Sonic/Hurt/08_V_SNC_007_b.ogg" type="AudioStream" id=59]
+[ext_resource path="res://Assets/Audio/Sound/Player/Sonic/Effort/14_V_SNC_013_a.ogg" type="AudioStream" id=60]
+[ext_resource path="res://Assets/Audio/Sound/Player/Sonic/Hurt/07_V_SNC_006_a.ogg" type="AudioStream" id=61]
+[ext_resource path="res://Assets/Audio/Sound/Player/Sonic/Effort/18_V_SNC_033_c.ogg" type="AudioStream" id=62]
+[ext_resource path="res://Assets/Audio/Sound/Player/Sonic/Hurt/21_V_SNC_035_c.ogg" type="AudioStream" id=63]
+[ext_resource path="res://Assets/Audio/Sound/Player/Sonic/Effort/01_V_SNC_002_a.ogg" type="AudioStream" id=64]
+[ext_resource path="res://Assets/Audio/Sound/Player/Sonic/Effort/01_V_SNC_000_b.ogg" type="AudioStream" id=65]
+[ext_resource path="res://Assets/Audio/Sound/Player/Sonic/Hurt/16_V_SNC_030_b.ogg" type="AudioStream" id=66]
+[ext_resource path="res://Assets/Audio/Sound/Player/Sonic/Hurt/08_V_SNC_008_c.ogg" type="AudioStream" id=67]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+[sub_resource type="Gradient" id=2]
+offsets = PoolRealArray( 0.0927152, 0.390728 )
+colors = PoolColorArray( 0.00990295, 0.0960615, 0.230469, 0, 0, 0.320313, 1, 1 )
+
+[sub_resource type="Gradient" id=4]
+offsets = PoolRealArray( 0, 0.0180723, 0.46988 )
+colors = PoolColorArray( 0.99295, 1, 0.871094, 1, 0.945313, 1, 0, 1, 1, 0, 0, 1 )
+
+[sub_resource type="GradientTexture" id=5]
+gradient = SubResource( 4 )
+
+[sub_resource type="Curve" id=6]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.0899471, 1 ), 0.0, 0.0, 0, 0, Vector2( 0.374359, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=7]
+curve = SubResource( 6 )
+
+[sub_resource type="ParticlesMaterial" id=8]
+lifetime_randomness = 1.0
+trail_divisor = 3
+flag_align_y = true
+flag_disable_z = true
+direction = Vector3( 0, -20, 0 )
+spread = 76.15
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 100.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 1.0
+damping = 90.38
+damping_random = 1.0
+scale = 4.0
+scale_random = 1.0
+scale_curve = SubResource( 7 )
+color_ramp = SubResource( 5 )
+
+[node name="Player" type="Area2D"]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource( 19 )
+boost_sfx = ExtResource( 17 )
+stomp_sfx = ExtResource( 16 )
+stomp_land_sfx = ExtResource( 18 )
+bounceRing = ExtResource( 55 )
+boostParticle = ExtResource( 57 )
+SKID_ACCEL = 0.1
+JUMP_VELOCITY = 4.0
+can_boost = true
+
+[node name="playerCollider" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, -1.05945 )
+current = true
+zoom = Vector2( 0.5, 0.5 )
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+smoothing_speed = 20.0
+drag_margin_left = 0.0
+drag_margin_top = 0.0
+drag_margin_right = 0.0
+drag_margin_bottom = 0.0
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Camera2D"]
+visible = false
+margin_left = -50.1209
+margin_top = -48.7575
+margin_right = -10.1209
+margin_bottom = -8.75748
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PlayerSprites" parent="." instance=ExtResource( 1 )]
+frame = 1
+
+[node name="LeftCast" type="RayCast2D" parent="."]
+position = Vector2( -6, -10 )
+enabled = true
+
+[node name="LeftCastTop" type="RayCast2D" parent="."]
+position = Vector2( -8, 10 )
+enabled = true
+cast_to = Vector2( 0, -70 )
+
+[node name="RightCast" type="RayCast2D" parent="."]
+position = Vector2( 6, -10 )
+enabled = true
+
+[node name="RightCastTop" type="RayCast2D" parent="."]
+position = Vector2( 8, 10 )
+enabled = true
+cast_to = Vector2( 0, -70 )
+
+[node name="LSideCast" type="RayCast2D" parent="."]
+position = Vector2( 6, 0 )
+enabled = true
+cast_to = Vector2( -50, 0 )
+
+[node name="RSideCast" type="RayCast2D" parent="."]
+position = Vector2( -6, 0 )
+enabled = true
+cast_to = Vector2( 50, 0 )
+
+[node name="BoostLine" type="Line2D" parent="."]
+visible = false
+light_mask = 0
+z_index = -2
+points = PoolVector2Array( 0, 0, -200, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 )
+width = 20.0
+default_color = Color( 0.4, 0.501961, 1, 0 )
+gradient = SubResource( 2 )
+texture_mode = 4124
+joint_mode = 2
+
+[node name="BoostSprite" parent="." instance=ExtResource( 2 )]
+visible = false
+frame = 1
+
+[node name="sound_boost" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -3.0
+bus = "SFX"
+
+[node name="sound_rail" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 53 )
+volume_db = 3.438
+bus = "SFX"
+
+[node name="GrindParticles" type="Particles2D" parent="."]
+light_mask = 0
+position = Vector2( 1.38243, 13.8875 )
+amount = 500
+randomness = 1.0
+local_coords = false
+process_material = SubResource( 8 )
+
+[node name="sound_voice" type="AudioStreamPlayer2D" parent="."]
+bus = "SFX"
+script = ExtResource( 58 )
+hurt = [ ExtResource( 61 ), ExtResource( 59 ), ExtResource( 67 ), ExtResource( 66 ), ExtResource( 63 ) ]
+effort = [ ExtResource( 65 ), ExtResource( 64 ), ExtResource( 60 ), ExtResource( 62 ) ]

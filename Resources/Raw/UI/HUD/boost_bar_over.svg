@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="192"
+   height="32"
+   viewBox="0 0 50.799999 8.4666669"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"
+   sodipodi:docname="boost_bar_over.svg"
+   inkscape:export-filename="/home/stuart/tmp/boost_bar_over.png"
+   inkscape:export-xdpi="360"
+   inkscape:export-ydpi="360">
+  <title
+     id="title20">Boost</title>
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="9.1146077"
+     inkscape:cx="96.461879"
+     inkscape:cy="16.281535"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     borderlayer="true"
+     units="px"
+     inkscape:window-width="1920"
+     inkscape:window-height="997"
+     inkscape:window-x="0"
+     inkscape:window-y="28"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>Boost</dc:title>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Stuart &quot;Sslaxx&quot; Moore</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <cc:license
+           rdf:resource="" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       aria-label="BOOST"
+       id="text15"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.7295px;line-height:200%;font-family:Vipnagorgialla;-inkscape-font-specification:'Vipnagorgialla, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:0.498039;stroke:#000000;stroke-width:0.198178;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">
+      <path
+         d="m 9.4424471,3.3760756 q 0,0.660639 -0.6449095,0.849393 0.6449095,0.283131 0.6449095,0.880852 v 1.1797125 q 0,0.849393 -0.377508,1.25836 -0.3617785,0.408967 -1.2111715,0.534803 -0.4876145,0.062918 -1.3999255,0.062918 H 0.0991242 V 0.35601168 h 6.3547179 q 0.817934,0 1.3999255,0.0786475 0.8651225,0.125836 1.226901,0.53480299 Q 9.4424471,1.3626997 9.4424471,2.2120927 Z M 6.4381126,2.4637647 Q 6.3437356,2.3379287 5.6201786,2.3379287 H 3.0877292 v 0.9123109 h 2.9886049 q 0.4561555,0 0.4561555,-0.4876144 0,-0.188754 -0.094377,-0.2988605 z M 6.0763341,5.2321566 H 3.0877292 v 0.9280405 h 2.5324494 q 0.503344,0 0.597721,-0.01573 0.31459,-0.078647 0.31459,-0.408967 0,-0.4876145 -0.4561555,-0.503344 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.7295px;font-family:Vipnagorgialla;-inkscape-font-specification:'Vipnagorgialla, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:0.498039;stroke:#000000;stroke-width:0.198178;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path9" />
+      <path
+         d="m 20.342988,6.2860331 q 0,0.849393 -0.377508,1.25836 -0.361778,0.408967 -1.195442,0.534803 -0.487614,0.062918 -1.415655,0.062918 h -3.948104 q -0.912311,0 -1.321278,-0.047189 -0.880852,-0.125836 -1.274089,-0.534803 -0.377508,-0.408967 -0.377508,-1.2740895 V 2.2120927 q 0,-0.880852 0.377508,-1.27408953 0.377508,-0.39323749 1.274089,-0.51907349 0.519074,-0.062918 1.321278,-0.062918 h 3.948104 q 0.928041,0 1.415655,0.062918 0.833664,0.125836 1.195442,0.53480299 0.377508,0.40896703 0.377508,1.25836003 z M 17.385842,5.6411236 V 2.8570022 q 0,-0.346049 -0.283131,-0.4561555 -0.173024,-0.062918 -0.581991,-0.062918 h -2.249318 q -0.393238,0 -0.581992,0.062918 -0.283131,0.1101065 -0.283131,0.4561555 v 2.7841214 q 0,0.346049 0.283131,0.4561555 0.157295,0.062918 0.581992,0.062918 h 2.249318 q 0.408967,0 0.581991,-0.062918 0.283131,-0.1101065 0.283131,-0.4561555 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.7295px;font-family:Vipnagorgialla;-inkscape-font-specification:'Vipnagorgialla, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:0.498039;stroke:#000000;stroke-width:0.198178;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path11" />
+      <path
+         d="m 31.243514,6.2860331 q 0,0.849393 -0.377508,1.25836 -0.361779,0.408967 -1.195442,0.534803 -0.487615,0.062918 -1.415655,0.062918 h -3.948105 q -0.912311,0 -1.321278,-0.047189 -0.880852,-0.125836 -1.274089,-0.534803 -0.377508,-0.408967 -0.377508,-1.2740895 V 2.2120927 q 0,-0.880852 0.377508,-1.27408953 0.377508,-0.39323749 1.274089,-0.51907349 0.519074,-0.062918 1.321278,-0.062918 h 3.948105 q 0.92804,0 1.415655,0.062918 0.833663,0.125836 1.195442,0.53480299 0.377508,0.40896703 0.377508,1.25836003 z M 28.286368,5.6411236 V 2.8570022 q 0,-0.346049 -0.283131,-0.4561555 -0.173025,-0.062918 -0.581992,-0.062918 h -2.249318 q -0.393238,0 -0.581992,0.062918 -0.283131,0.1101065 -0.283131,0.4561555 v 2.7841214 q 0,0.346049 0.283131,0.4561555 0.157295,0.062918 0.581992,0.062918 h 2.249318 q 0.408967,0 0.581992,-0.062918 0.283131,-0.1101065 0.283131,-0.4561555 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.7295px;font-family:Vipnagorgialla;-inkscape-font-specification:'Vipnagorgialla, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:0.498039;stroke:#000000;stroke-width:0.198178;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path13" />
+      <path
+         d="m 41.624968,6.2860331 q 0,0.849393 -0.361779,1.25836 -0.361778,0.408967 -1.195441,0.534803 -0.487615,0.062918 -1.431385,0.062918 h -6.480554 v -1.981917 h 6.118776 q 0.393237,-0.01573 0.393237,-0.377508 0,-0.346049 -0.04719,-0.4246965 -0.06292,-0.1415655 -0.361779,-0.1415655 h -3.240277 q -1.022417,0 -1.808892,-0.31459 Q 32.155809,4.4771406 32.155809,3.5962886 V 2.1963632 q 0,-0.8651225 0.346049,-1.25836003 0.361779,-0.40896699 1.211172,-0.53480299 0.581991,-0.0786475 1.431384,-0.0786475 H 40.61828 V 2.3221992 h -5.112087 q -0.377508,0 -0.377508,0.3617785 0,0.4718849 0.173024,0.5505324 0.04719,0.015729 0.692098,0.015729 h 3.082982 q 1.022418,0 1.714515,0.408967 0.833664,0.4876145 0.833664,1.447114 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.7295px;font-family:Vipnagorgialla;-inkscape-font-specification:'Vipnagorgialla, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:0.498039;stroke:#000000;stroke-width:0.198178;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path15" />
+      <path
+         d="M 50.700875,2.3221992 H 47.759459 V 8.1421141 H 44.786583 V 2.3221992 H 42.081109 V 0.32455268 h 8.619766 z"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15.7295px;font-family:Vipnagorgialla;-inkscape-font-specification:'Vipnagorgialla, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:center;text-anchor:middle;fill:#ffffff;fill-opacity:0.498039;stroke:#000000;stroke-width:0.198178;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="path17" />
+    </g>
+  </g>
+</svg>
