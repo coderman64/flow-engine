@@ -34,7 +34,7 @@ func process_boost () -> void:
 
 		# reset the boost line points
 		for i in range (0, TRAIL_LENGTH):
-			boost_line.points[i] = Vector2.ZERO
+			boost_line.points [i] = Vector2.ZERO
 
 		# play the boost sfx
 		boost_sound.stream = boost_sfx
@@ -164,7 +164,7 @@ func process_air () -> void:
 
 		# clear all points in the boostLine rendered line
 		for i in range (0, TRAIL_LENGTH):
-			boost_line.points[i] = Vector2.ZERO
+			boost_line.points [i] = Vector2.ZERO
 
 		# play sound
 		boost_sound.stream = stomp_sfx
@@ -364,11 +364,14 @@ func _physics_process (_delta) -> void:
 	# calculate the player's physics, controls, and all that fun stuff
 	if (invincible > 0):	# Invincible? If so, run the counter down.
 		invincible -= 1
-		player_sprite.modulate = Color (1, 1, 1, 1-(invincible % 30)/30.0)
+		player_sprite.modulate = Color (1, 1, 1, 1 - (invincible % 30) / 30.0)
 	else:
 		hurt = false
 
-	grindParticles.emitting = is_grinding
+	if (not is_grinding and rail_sound.playing):
+		rail_sound.stop ()	# If you're not grinding on a rail, then the rail sound should not be playing.
+
+	grindParticles.emitting = is_grinding	# Grinding particles depend on if the player is grinding or not.
 
 	# run the correct function based on the current air/ground state
 	if (is_grinding):
@@ -386,12 +389,12 @@ func _physics_process (_delta) -> void:
 		else:
 			change_player_animation ("Grind")
 
-		if (is_stomping and (not is_tricking)):
+		if (is_stomping and not is_tricking):
 			is_tricking = true
 			stop_while_tricking = false
 			voice_sound.play_effort ()
 
-		grindHeight = player_sprite.frames.get_frame (player_sprite.animation, player_sprite.frame).get_height ()/2
+		grindHeight = player_sprite.frames.get_frame (player_sprite.animation, player_sprite.frame).get_height () / 2
 
 		grindOffset += grindVel
 		var dirVec = grindCurve.interpolate_baked (grindOffset+1)-grindCurve.interpolate_baked (grindOffset)
@@ -414,10 +417,11 @@ func _physics_process (_delta) -> void:
 		else:
 			player_velocity = dirVec*grindVel
 
-		if (is_jumping and (not is_crouching)):
-			if not can_jump_short:
+		if (is_jumping and not is_crouching):
+			if (not can_jump_short):
 				state = -1
-				player_velocity = Vector2 (player_velocity.x+sin (rotation)*JUMP_VELOCITY, player_velocity.y-cos (rotation)*JUMP_VELOCITY)
+				player_velocity = Vector2 (player_velocity.x + sin (rotation) * JUMP_VELOCITY, \
+					player_velocity.y - cos (rotation) * JUMP_VELOCITY)
 				player_sprite.rotation = rotation
 				rotation = 0
 				change_player_animation ("Roll")
@@ -430,18 +434,18 @@ func _physics_process (_delta) -> void:
 		else:
 			can_jump_short = false
 		process_boost ()
-	elif state == -1:
+	elif (state == -1):
 		process_air ()
 		is_rolling = false
-	elif state == 0:
+	elif (state == 0):
 		process_ground ()
 
 	# update the boost line
-	for i in range (0, TRAIL_LENGTH-1):
-		boost_line.points [i] = (boost_line.points [i + 1] - player_velocity + (last_position-position))
-	boost_line.points[TRAIL_LENGTH-1] = Vector2.ZERO
+	for i in range (0, TRAIL_LENGTH - 1):
+		boost_line.points [i] = (boost_line.points [i + 1] - player_velocity + (last_position - position))
+	boost_line.points [TRAIL_LENGTH-1] = Vector2.ZERO
 	if (is_stomping):
-		boost_line.points[TRAIL_LENGTH-1] = Vector2 (0, 8)
+		boost_line.points [TRAIL_LENGTH - 1] = Vector2 (0, 8)
 
 	# apply the character's velocity, no matter what state the player is in.
 	position = Vector2 (position.x+player_velocity.x, position.y+player_velocity.y)
