@@ -22,7 +22,7 @@ func _ready():
 
 # if the sprite has been collected, remove all visibility once the sparkle 
 # animation finishes
-func _process(delta):
+func _process(_delta):
 	if collected and sprite.animation == "Sparkle" and \
 		sprite.frame >= 6:
 		visible = false

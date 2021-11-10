@@ -35,7 +35,7 @@ func _ready():
 
 
 # place ring circle hints inside the editor
-func _process(delta):
+func _process(_delta):
 	if Engine.editor_hint:
 		var pposList = posList;
 		posList = []

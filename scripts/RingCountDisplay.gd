@@ -16,7 +16,7 @@ func _ready():
 	for i in range(3,0,-1):
 		digits.append(get_node("Numbers/Digit %d/TextureRect2" % i))
 
-func _process(delta):
+func _process(_delta):
 	# place stores the place multiplier for the value 
 	var place = 1
 	for i in digits:
