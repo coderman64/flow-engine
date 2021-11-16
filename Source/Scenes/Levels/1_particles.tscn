@@ -26,16 +26,6 @@ color = Color( 0.0470588, 0.929412, 0.247059, 1 )
 [node name="Particles" type="Node2D"]
 
 [node name="Particles2D_1" type="Particles2D" parent="."]
-process_material = SubResource( 3 )
-
-[node name="Particles2D_2" type="Particles2D" parent="."]
-process_material = SubResource( 3 )
-
-[node name="Particles2D_3" type="Particles2D" parent="."]
-process_material = SubResource( 3 )
-
-[node name="Particles2D_4" type="Particles2D" parent="."]
-process_material = SubResource( 3 )
-
-[node name="Particles2D_5" type="Particles2D" parent="."]
+amount = 40
+visibility_rect = Rect2( -295.679, -286.954, 595.587, 625.786 )
 process_material = SubResource( 3 )

@@ -1,4 +1,4 @@
-### boostParticle.gd
+### boost_particle.gd
 # Boost "particles" are the "remains" of things that add to the players's boost score.
 # They move towards the player, getting faster depending on time taken and player position.
 # Once they get close enough to the player's position, boost is added to and the particle removed.
