@@ -4,6 +4,7 @@
 extends Node2D
 
 export(String, FILE, "*.ogg") var music_file	# Specify a file to be played.
+export(String, FILE, "*.png") var level_logo	# What's the logo for this level?
 
 func _ready () -> void:
 	if (not music_file == ""):	# If there's a music file specified, play it.

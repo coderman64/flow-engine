@@ -11,22 +11,35 @@ script = ExtResource( 2 )
 margin_left = 800.0
 margin_right = 1020.0
 margin_bottom = 22.0
-custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "POSITION: XXXXX, YYYYY"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Velocity" type="Label" parent="."]
+margin_left = 800.0
+margin_top = 23.0
+margin_right = 1020.0
+margin_bottom = 45.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "VELOCITY: XXXXX, YYYYY"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="FPS" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 22.0
+margin_top = 49.0
 margin_right = 1020.0
-margin_bottom = 44.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 71.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "FPS: XXXXX"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -34,12 +47,12 @@ __meta__ = {
 
 [node name="Boosting" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 44.0
+margin_top = 71.0
 margin_right = 1020.0
-margin_bottom = 66.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 93.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "IS BOOSTING: NO"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -47,12 +60,12 @@ __meta__ = {
 
 [node name="Crouching" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 66.0
+margin_top = 93.0
 margin_right = 1020.0
-margin_bottom = 88.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 115.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "IS BOOSTING: NO"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -60,12 +73,25 @@ __meta__ = {
 
 [node name="Flying" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 88.0
+margin_top = 115.0
 margin_right = 1020.0
-margin_bottom = 110.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 137.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "IS BOOSTING: NO"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Grinding" type="Label" parent="."]
+margin_left = 800.0
+margin_top = 135.0
+margin_right = 1020.0
+margin_bottom = 157.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "IS BOOSTING: NO"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -73,12 +99,12 @@ __meta__ = {
 
 [node name="Gliding" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 112.0
+margin_top = 155.0
 margin_right = 1020.0
-margin_bottom = 134.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 177.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "IS BOOSTING: NO"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -86,12 +112,12 @@ __meta__ = {
 
 [node name="Jumping" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 134.0
+margin_top = 177.0
 margin_right = 1020.0
-margin_bottom = 156.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 199.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "IS BOOSTING: NO"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -99,12 +125,12 @@ __meta__ = {
 
 [node name="Rolling" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 156.0
+margin_top = 199.0
 margin_right = 1020.0
-margin_bottom = 178.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 221.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "IS BOOSTING: NO"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -112,12 +138,12 @@ __meta__ = {
 
 [node name="Spindashing" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 178.0
+margin_top = 221.0
 margin_right = 1020.0
-margin_bottom = 200.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 243.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "IS BOOSTING: NO"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -125,12 +151,12 @@ __meta__ = {
 
 [node name="Stomping" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 200.0
+margin_top = 243.0
 margin_right = 1020.0
-margin_bottom = 222.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 265.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "IS BOOSTING: NO"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -138,12 +164,12 @@ __meta__ = {
 
 [node name="Tricking" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 224.0
+margin_top = 267.0
 margin_right = 1020.0
-margin_bottom = 246.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 289.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "IS BOOSTING: NO"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -151,12 +177,12 @@ __meta__ = {
 
 [node name="Unmoveable" type="Label" parent="."]
 margin_left = 800.0
-margin_top = 246.0
+margin_top = 289.0
 margin_right = 1020.0
-margin_bottom = 268.0
-custom_fonts/font = ExtResource( 1 )
+margin_bottom = 311.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 1 )
 text = "IS BOOSTING: NO"
 __meta__ = {
 "_edit_use_anchors_": false

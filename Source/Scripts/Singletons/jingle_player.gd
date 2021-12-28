@@ -32,21 +32,21 @@ func _ready () -> void:
 # Plays a specified music file as a jingle (path_to_jingle), muting the Music bus beforehand.
 # After the jingle is finished, music_unmute can be set false to leave the music bus muted.
 # Returns true if it plays something, otherwise false.
-func play_jingle (path_to_jingle = "", music_unmute = true) -> bool:
+func play_jingle (path_to_jingle = "", music_unmute = true) -> void:
 	var play_me = null			# This will hold the stream for the jingle.
 	unmute_music = music_unmute	# Make sure music will be muted/unmuted after this jingle is done.
 	if (not ResourceLoader.exists (path_to_jingle)):	# The file doesn't exist, so say so.
 		printerr ("ERROR: jingle_player has no jingle to play! ", path_to_jingle, " does not exist!")
-		return (false)
+		return
 	play_me = load (path_to_jingle) as AudioStream
 	stream = play_me		# Set the stream.
 	if (stream == null):	# If the stream is null, this means the sound file is invalid, so report an error.
 		printerr ("ERROR: jingle_player has an empty stream! ", path_to_jingle, " is not a valid sound file.")
-		return (false)
+		return
 	print_debug ("Playing ", stream, " from ", path_to_jingle, ".")
 	AudioServer.set_bus_mute (music_player.bus_index, true)		# Mute the Music bus...
 	play ()														# ...play the jingle...
-	return (true)												# ...and return true.
+	return														# ...and return.
 
 ## stop_jingle
 # jingle_player.stop_jingle (abort_jingle)

@@ -100,7 +100,8 @@ func on_level_timer_timeout () -> void:
 	if (timer.x > 59):	# A minute has passed!
 		timer.x = 0
 		timer.y += 1
-	$"/root/Level/game_hud/hud_timer/count".text = var2str (int (timer.y)).pad_zeros (2) + ":" + var2str (int (timer.x)).pad_zeros(2)
+	$"/root/Level/game_hud/hud_timer/count".text = var2str (int (timer.y)).pad_zeros (2) + \
+		":" + var2str (int (timer.x)).pad_zeros(2)
 	return
 
 ## set_score

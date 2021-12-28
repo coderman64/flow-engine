@@ -1,12 +1,14 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scenes/LevelItems/Checkpoint.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm.tres" type="TileSet" id=2]
 [ext_resource path="res://Scripts/Levels/chaos_festival.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Graphics/Backgrounds/Festival/Castle.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Graphics/Backgrounds/Festival/Villa.png" type="Texture" id=5]
+[ext_resource path="res://Scenes/LevelItems/goal_post.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/LevelItems/Spring.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/LevelItems/LayerSwitch.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/UI/zone_intro.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Scenes/LevelItems/AirRing.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Scenes/LevelItems/DeathPlane.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Scenes/Enemies/EggPawn.tscn" type="PackedScene" id=12]
@@ -437,3 +439,10 @@ position = Vector2( 4736, -16 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 11 )
+
+[node name="goal_post" parent="." instance=ExtResource( 6 )]
+position = Vector2( 9072, -704 )
+
+[node name="zone_intro" parent="." instance=ExtResource( 9 )]
+position = Vector2( -2840, -180 )
+scale = Vector2( 0.5, 0.5 )

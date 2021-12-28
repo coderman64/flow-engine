@@ -336,7 +336,8 @@ func process_ground () -> void:
 	if (is_jumping and not is_crouching and (not is_boosting)):
 		if (not can_jump_short):
 			state = -1
-			player_velocity = Vector2 (player_velocity.x+sin (rotation)*JUMP_VELOCITY, player_velocity.y-cos (rotation)*JUMP_VELOCITY)
+			player_velocity = Vector2 (player_velocity.x+sin (rotation)*JUMP_VELOCITY, \
+				player_velocity.y-cos (rotation)*JUMP_VELOCITY)
 			player_sprite.rotation = rotation
 			rotation = 0
 			change_player_animation ("Roll")
@@ -458,7 +459,8 @@ func _physics_process (_delta) -> void:
 			i.rotation = -rotation
 
 	# ensure the player is facing the right direction
-	player_sprite.flip_h = (false if movement_direction < 0 and player_velocity.x < 0.0 else (true if movement_direction > 0 and player_velocity.x > 0.0 else player_sprite.flip_h))
+	player_sprite.flip_h = (false if movement_direction < 0 and player_velocity.x < 0.0 else \
+		(true if movement_direction > 0 and player_velocity.x > 0.0 else player_sprite.flip_h))
 
 	return
 

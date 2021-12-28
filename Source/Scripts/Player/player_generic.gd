@@ -165,7 +165,8 @@ func _ready () -> void:
 func _input (_event: InputEvent) -> void:
 	if (not has_node ("/root/Level/game_hud")):
 		return
-	if (is_unmoveable):	# No player input wanted right now...
+	if (is_unmoveable):				# No player input wanted right now...
+		movement_direction = 0		# ...so make sure the player's not moving.
 		return
 	if (Input.is_action_just_pressed ("toggle_pause")):	# Pause the game?
 		helper_functions.add_path_to_node ("res://Scenes/UI/menu_options.tscn", "/root/Level/game_hud")
@@ -248,6 +249,7 @@ func reset_character () -> void:
 	game_space.change_boost_value (-60)
 	game_space.change_boost_value (20)
 	invincible = 0
+	is_unmoveable = false
 	return
 
 ## is_player_attacking

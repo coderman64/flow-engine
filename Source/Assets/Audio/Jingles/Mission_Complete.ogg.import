@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mission_Complete.ogg-88aada394623aa4482ed1ab2e8e96138.oggstr"
+
+[deps]
+
+source_file="res://Assets/Audio/Jingles/Mission_Complete.ogg"
+dest_files=[ "res://.import/Mission_Complete.ogg-88aada394623aa4482ed1ab2e8e96138.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
