@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BoostRing.png-320b44398c57d88572033b1d14323860.stex"
+path="res://.import/item_ring.png-4a4bed87e282dd73abdf538a22afdd3f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/LevelItems/BoostRing.png"
-dest_files=[ "res://.import/BoostRing.png-320b44398c57d88572033b1d14323860.stex" ]
+source_file="res://Assets/Graphics/LevelItems/item_ring.png"
+dest_files=[ "res://.import/item_ring.png-4a4bed87e282dd73abdf538a22afdd3f.stex" ]
 
 [params]
 

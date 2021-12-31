@@ -1,4 +1,4 @@
-### DeathPlane.gd
+### death_plane.gd
 # Controls the "plane of death".
 
 extends Area2D

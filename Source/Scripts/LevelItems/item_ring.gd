@@ -1,4 +1,4 @@
-### Ring.gd
+### item_ring.gd
 # Controls a typical (non-flying) ring
 
 extends Area2D

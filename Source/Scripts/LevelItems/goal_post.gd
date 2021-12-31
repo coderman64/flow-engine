@@ -1,7 +1,8 @@
-extends Area2D
-
-## Controls the "goalpost" - the end of the current level.
+## goal_post.gd
+# Controls the "goalpost" - the end of the current level.
 # When it's touched, it'll play an animation. Once that animation has finished, it'll do the end-of-level stuff.
+
+extends Area2D
 
 var goaled:bool = false
 

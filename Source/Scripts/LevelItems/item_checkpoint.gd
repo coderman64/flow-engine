@@ -1,4 +1,4 @@
-### Checkpoint.gd
+### item_checkpoint.gd
 # Operates checkpoints that the player is returned to if they die.
 
 extends Area2D

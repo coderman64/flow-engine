@@ -5,7 +5,7 @@
 extends CanvasLayer
 
 func _ready () -> void:
-	if (!OS.is_debug_build ()):		# If not running in debug mode, remove this.
+	if (not OS.is_debug_build ()):		# If not running in debug mode, remove this.
 		queue_free ()
 	return
 

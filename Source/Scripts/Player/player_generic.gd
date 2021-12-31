@@ -241,7 +241,8 @@ func reset_character () -> void:
 	state = -1
 	if (not game_space.last_checkpoint == null):	# Passed a valid checkpoint, so go back to it.
 		position = game_space.last_checkpoint.position
-		game_space.timer = game_space.last_checkpoint.last_time	# Rewind time to the time it was when the checkpoint was passed.
+		# Rewind time to the time it was when the checkpoint was passed.
+		game_space.timer = game_space.last_checkpoint.last_time
 	else:
 		printerr ("You shouldn't see this - did you forget to set start_point?")
 		position = Vector2.ZERO
@@ -266,7 +267,8 @@ func hurt_player () -> void:
 		invincible = 120*5		# Counter for "blinking" temporary invunerability state.
 		# Launch the player backwards.
 		state = -1
-		player_velocity = Vector2 (-player_velocity.x+sin (rotation) * JUMP_VELOCITY, player_velocity.y-cos (rotation) * JUMP_VELOCITY)
+		player_velocity = Vector2 (-player_velocity.x+sin (rotation) * JUMP_VELOCITY, \
+			player_velocity.y-cos (rotation) * JUMP_VELOCITY)
 		rotation = 0
 		position += player_velocity*2
 

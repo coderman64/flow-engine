@@ -1,3 +1,4 @@
+## grind_rail.gd
 # the system for creating rails from curves in Godot
 
 extends Path2D

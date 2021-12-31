@@ -1,19 +1,19 @@
 [gd_scene load_steps=28 format=2]
 
-[ext_resource path="res://Scenes/LevelItems/Checkpoint.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/LevelItems/item_checkpoint.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Graphics/Tiles/leafStorm.tres" type="TileSet" id=2]
 [ext_resource path="res://Scripts/Levels/chaos_festival.gd" type="Script" id=3]
 [ext_resource path="res://Assets/Graphics/Backgrounds/Festival/Castle.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Graphics/Backgrounds/Festival/Villa.png" type="Texture" id=5]
 [ext_resource path="res://Scenes/LevelItems/goal_post.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/LevelItems/Spring.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Scenes/LevelItems/LayerSwitch.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Scenes/LevelItems/air_furniture_spring.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/LevelItems/layers_switch.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Scenes/UI/zone_intro.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Scenes/LevelItems/AirRing.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Scenes/LevelItems/DeathPlane.tscn" type="PackedScene" id=11]
-[ext_resource path="res://Scenes/Enemies/EggPawn.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Scenes/LevelItems/Rail.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Scenes/LevelItems/RingSpawner.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Scenes/LevelItems/air_furniture_ring.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Scenes/LevelItems/death_plane.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/Enemies/enemy_eggpawn.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Scenes/LevelItems/grind_rail.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Scenes/LevelItems/rings_spawner.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Scenes/LevelItems/lamp.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Assets/Graphics/Effects/light.png" type="Texture" id=17]
 
@@ -339,7 +339,7 @@ position = Vector2( 6789.7, -66.0855 )
 scale = Vector2( 2.164, 2.512 )
 function = "layer 1"
 
-[node name="DeathPlane" parent="." instance=ExtResource( 11 )]
+[node name="death_plane" parent="." instance=ExtResource( 11 )]
 
 [node name="Rails" type="Node" parent="."]
 

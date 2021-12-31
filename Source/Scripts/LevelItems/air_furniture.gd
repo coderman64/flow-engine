@@ -1,17 +1,18 @@
+## air_furniture.gd
 # controls "air furniture", such as springs, boost rings etc.
 
 extends Area2D
 
-# how strong is the spring?
+# how strong is it?
 export(float) var STRENGTH = 7
-# does the spring force the player to go in the direction it is facing?
+# does the force the player to go in the direction it is facing?
 export(bool) var DIRECTED = false
 # add a scaling effect (usually for boost rings)
 export(bool) var furniture_scaling = false
 
 onready var animation = find_node ("AnimatedSprite")	# stores the animated sprite
 onready var sound = find_node ("AudioStreamPlayer")		# stores the audio stream player
-var scaling := 1.0										# stores the current scale of the spring
+var scaling := 1.0										# stores the current scale
 
 func _ready () -> void:
 	helper_functions._whocares = self.connect ("area_entered", self, "_on_Area2D_area_entered")
@@ -23,7 +24,7 @@ func _on_Area2D_area_entered (area) -> void:
 		# calculate what vector to launch the player in
 		var launchVector := Vector2 (0, -STRENGTH).rotated (rotation)
 
-		# If undirected, calculate how fast the player is moving perpendicularly to the spring.
+		# If undirected, calculate how fast the player is moving perpendicularly to it.
 		var sideVector = (Vector2.ZERO if DIRECTED else area.player_velocity.dot (launchVector.normalized ().rotated (PI / 2))\
 				*launchVector.normalized ().rotated (PI / 2))
 

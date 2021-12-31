@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Scenes/LevelItems/Ring.tscn" type="PackedScene" id=1]
-[ext_resource path="res://Scripts/LevelItems/RingSpawner.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/LevelItems/item_ring.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/LevelItems/rings_spawner.gd" type="Script" id=2]
 
 [node name="RingSpawner" type="Node2D"]
 position = Vector2( -1844.38, -21.6713 )

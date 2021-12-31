@@ -1,7 +1,7 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Scripts/LevelItems/air_furniture.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Graphics/LevelItems/Spring1.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Graphics/LevelItems/air_furniture_spring.png" type="Texture" id=2]
 [ext_resource path="res://Assets/Audio/Sound/LevelItems/spring.ogg" type="AudioStream" id=3]
 
 [sub_resource type="AtlasTexture" id=1]

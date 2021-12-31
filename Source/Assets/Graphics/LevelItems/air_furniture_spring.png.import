@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Rings.png-7d2b56510fc83f4cbae2e31f1b7e2c45.stex"
+path="res://.import/air_furniture_spring.png-ef1d8f27cabd9b1366aa24dc41450d9e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Graphics/LevelItems/Rings.png"
-dest_files=[ "res://.import/Rings.png-7d2b56510fc83f4cbae2e31f1b7e2c45.stex" ]
+source_file="res://Assets/Graphics/LevelItems/air_furniture_spring.png"
+dest_files=[ "res://.import/air_furniture_spring.png-ef1d8f27cabd9b1366aa24dc41450d9e.stex" ]
 
 [params]
 

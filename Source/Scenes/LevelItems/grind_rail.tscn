@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Assets/Graphics/LevelItems/rail.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/LevelItems/Rail.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/LevelItems/grind_rail.gd" type="Script" id=2]
 
 [sub_resource type="Curve2D" id=1]
 _data = {

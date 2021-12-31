@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Assets/Graphics/LevelItems/BoostRing.png" type="Texture" id=1]
+[ext_resource path="res://Assets/Graphics/LevelItems/air_furniture_ring.png" type="Texture" id=1]
 [ext_resource path="res://Assets/Audio/Sound/LevelItems/airBoostRing.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Scripts/LevelItems/air_furniture.gd" type="Script" id=3]
 

@@ -106,7 +106,7 @@ func on_level_timer_timeout () -> void:
 
 ## set_score
 # Sets the player score.
-func set_score (value):
+func set_score (value:int) -> void:
 	if (not has_node ("/root/Level/game_hud")):		# Make sure the game_hud is available!
 		return
 	score = value
@@ -125,7 +125,7 @@ func set_lives (value:int) -> void:
 		sound_player.play_sound ("player_death")
 		player_node.reset_character ()
 	elif (value > lives):			# Extra life time...
-		helper_functions._whocares = jingle_player.play_jingle ("res://Assets/Audio/Jingles/Extra_Life.ogg")
+		jingle_player.play_jingle ("res://Assets/Audio/Jingles/Extra_Life.ogg")
 	lives = value
 	if (lives < 0):					# No lives left? It's game over.
 		player_node.reset_game ()
